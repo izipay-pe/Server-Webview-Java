@@ -2,10 +2,11 @@
 ##  Índice
 * [1. Introducción](#1-introducción)
 * [2. Requisitos previos](#2-requisitos-previos)
-* [3. Despliegue](#3-despliegue)
+* [3. Configuración](#3-configuracion)
 * [4. Datos de conexión](#4-datos-de-conexión)
-* [5. Subirlo al servidor web](#4-subirlo-al-servidor-web)
-* [6. Configurar la URL de notificacion al final del pago](#5--configurar-la-url-de-notificaci%C3%B3n-al-final-del-pago)
+* [5. Ejecutar proyecto](#5-ejecutar-proyecto)
+* [6. Subirlo al servidor web](#6-subirlo-al-servidor-web)
+* [7. Configurar la URL de notificacion al final del pago](#7--configurar-la-url-de-notificaci%C3%B3n-al-final-del-pago)
 ## 1. Introducción
 En este manual podrás encontrar una guía paso a paso para configurar un servidor de **[Java]** para generar un link de redirección. Te proporcionaremos instrucciones detalladas y credenciales de prueba para la instalación y configuración del proyecto, permitiéndote trabajar y experimentar de manera segura en tu propio entorno local.
 Este manual está diseñado para ayudarte a comprender el flujo de la integración de la pasarela para ayudarte a aprovechar al máximo tu proyecto y facilitar tu experiencia de desarrollo.
@@ -23,7 +24,7 @@ Este manual está diseñado para ayudarte a comprender el flujo de la integraci�
 > [!NOTE]
 > Tener en cuenta que, para que el desarrollo de tu proyecto, eres libre de emplear tus herramientas preferidas.
 
-## 3. Despliegue
+## 3. Configuracion
 ### Instalar Apache Maven:
 1. Descargar archivo binario del enlace:
 ```sh
@@ -55,17 +56,6 @@ OS name: "mac os x", version: "10.8.5", arch: "x86_64", family: "mac"
   ```sh
   git clone [https://github.com/izipay-pe/Server-Webview-Java.git]
   ```
-### Ejecutar proyecto
-* Ingrese a la carpeta raíz del proyecto desde el terminal.
-
-* Crear un archivo `jar` ejecutable:
-```bash
-mvn package
- ```
-* Para poder probar si el servidor está operativo, ingrese a la carpeta `target` y ejecute el comando apuntando hacia el archivo `jar` con dependencias:
-```bash
-java -jar inApp-server-1.1-jar-with-dependencies.jar
-```
 
 ## 4. Datos de conexión 
 
@@ -76,7 +66,19 @@ java -jar inApp-server-1.1-jar-with-dependencies.jar
   <img src="https://i.postimg.cc/g2yZgCVD/Credentials-Java.png" alt="Credentials"/>
 </p>
 
-## 5. Subirlo al servidor web
+## 5. Ejecutar proyecto
+* Ingrese a la carpeta raíz del proyecto desde el terminal.
+
+* Crear un archivo `jar` ejecutable:
+```bash
+mvn package
+ ```
+* Para poder probar si el servidor está operativo, ingrese a la carpeta `target` y ejecute el siguiente comando apuntando hacia el archivo `jar` con dependencias:
+```bash
+java -jar inApp-server-1.1-jar-with-dependencies.jar
+```
+
+## 6. Subirlo al servidor web
 
 Para este ejemplo se utilizó reenvío de puertos en Visual Studio Code, siga los siguientes pasos.
 
@@ -89,7 +91,7 @@ Para este ejemplo se utilizó reenvío de puertos en Visual Studio Code, siga lo
   <img src="https://i.postimg.cc/mD907rsV/visual.png" />
 </p>
 
-## 6. Probar el servidor desde POSTMAN
+## 7. Probar el servidor desde POSTMAN
 
 * Colocar la URL con el metodo POST y enviar la consulta.
   
